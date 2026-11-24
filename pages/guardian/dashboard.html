@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Family Guardian Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        Emergency Alert Line: 999 | Guardian Live Monitoring Active
+    </div>
+
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="link-seeker.html">Link Care Seeker</a></li>
+            <li><a href="monitoring.html">Remote Monitoring</a></li>
+            <li><a href="post-on-behalf.html">Post on Behalf</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h1>Welcome, <b>Tariq Rahman</b></h1>
+            <p class="text-muted">Role: Family Guardian | Linked Relatives: <strong>Abdul Rahman (Father, Age 72)</strong></p>
+        </div>
+
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>1</b></h2>
+                <p class="text-muted">Linked Elderly Relative</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>85%</b></h2>
+                <p class="text-muted">Weekly Medicine Adherence</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>1</b></h2>
+                <p class="text-muted">Active Volunteer Task</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b class="status-clear">All Clear</b></h2>
+                <p class="text-muted">Emergency Status</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Live Status Summary: <b>Abdul Rahman (Father)</b></h2>
+            <div class="row">
+                <div class="col notice-box ">
+                    <h3>💊 Today's Medicines</h3>
+                    <p>● Metformin (Morning): <span class="badge badge-success">Taken (8:15 AM)</span><br>● Losartan (Afternoon): <span class="badge badge-pending">Pending</span><br>● Atorvastatin (Night): <span class="badge badge-pending">Scheduled 9:00 PM</span></p>
+                </div>
+                <div class="col notice-box ">
+                    <h3>🤝 Active Volunteer Request</h3>
+                    <p>● Task: <strong>Medicine Pickup</strong><br>● Volunteer: <strong>Rafiq Ahmed</strong> (4.9 ⭐)<br>● Status: <span class="badge badge-info">In Progress</span></p>
+                </div>
+                <div class="col notice-box ">
+                    <h3>🩺 Next Medical Visit</h3>
+                    <p>● Doctor: <strong>Dr. Farhana Ahmed</strong><br>● Date: <strong>Tomorrow, 10:00 AM</strong><br>● Type: Routine Checkup</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Recent Platform Activity &amp; Alerts</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date &amp; Time</th>
+                        <th>Care Seeker</th>
+                        <th>Activity Type</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today, 10:30 AM</td>
+                        <td>Abdul Rahman</td>
+                        <td>Task Accepted</td>
+                        <td>Volunteer Rafiq Ahmed accepted help request for prescription pickup.</td>
+                        <td><span class="badge badge-info">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>Today, 8:15 AM</td>
+                        <td>Abdul Rahman</td>
+                        <td>Medicine Adherence</td>
+                        <td>Marked morning dose of Tab. Metformin 500mg as taken.</td>
+                        <td><span class="badge badge-success">On Time</span></td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday, 1:15 PM</td>
+                        <td>Abdul Rahman</td>
+                        <td>Meal Delivered</td>
+                        <td>Green Kitchen delivered Steamed Fish &amp; Soft Rice.</td>
+                        <td><span class="badge badge-success">Delivered</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <script src="../../js/guardian.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

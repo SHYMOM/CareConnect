@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Remote Monitoring & Adherence</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="link-seeker.html">Link Care Seeker</a></li>
+            <li><a href="monitoring.html" class="active">Remote Monitoring</a></li>
+            <li><a href="post-on-behalf.html">Post on Behalf</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Remote Health & Activity Monitoring</h1>
+        <p class="text-muted">Currently Monitoring: <strong>Abdul Rahman (Father, Age 72)</strong> | Residence: <strong>House 14, Road 5, Dhanmondi</strong></p>
+
+        <div class="card">
+            <div class="section-header-row">
+                <h2>Daily Medicine Adherence Log</h2>
+                <span class="badge badge-success">Adherence Rate: 85%</span>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Scheduled Time</th>
+                        <th>Medicine & Dosage</th>
+                        <th>Purpose</th>
+                        <th>Intake Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Morning (8:00 AM)</td>
+                        <td>Tab. Metformin 500mg</td>
+                        <td>Diabetes Control</td>
+                        <td><span class="badge badge-success">Taken at 8:15 AM</span></td>
+                    </tr>
+                    <tr>
+                        <td>Afternoon (1:30 PM)</td>
+                        <td>Tab. Losartan 50mg</td>
+                        <td>Blood Pressure</td>
+                        <td><span class="badge badge-pending">Pending Dose</span></td>
+                    </tr>
+                    <tr>
+                        <td>Night (9:00 PM)</td>
+                        <td>Tab. Atorvastatin 10mg</td>
+                        <td>Cholesterol</td>
+                        <td><span class="badge badge-info">Scheduled Later</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Help Requests & Volunteer Status</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Task Title</th>
+                        <th>Assigned Volunteer</th>
+                        <th>Status</th>
+                        <th>Volunteer Visit Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#REQ-101</td>
+                        <td>Prescription Medicine Pickup</td>
+                        <td>Rafiq Ahmed (01700112233)</td>
+                        <td><span class="badge badge-info">In Progress</span></td>
+                        <td>Volunteer currently at pharmacy collecting medication.</td>
+                    </tr>
+                    <tr>
+                        <td>#REQ-098</td>
+                        <td>Grocery Essentials</td>
+                        <td>Sadia Rahman</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>"Groceries handed over at gate with store receipt. Total: ৳ 450."</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Dietary Meal Delivery Tracking</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Delivery Date</th>
+                        <th>Meal Package</th>
+                        <th>Dietary Category</th>
+                        <th>Provider</th>
+                        <th>Delivery Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today (Lunch)</td>
+                        <td>Steamed Fish & Soft Rice</td>
+                        <td><span class="badge badge-success">Diabetic-Friendly</span> <span class="badge badge-info">Low-Salt</span></td>
+                        <td>Green Kitchen Catering</td>
+                        <td><span class="badge badge-success">Delivered at 1:15 PM</span></td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday (Dinner)</td>
+                        <td>Vegetable Oats Khichuri</td>
+                        <td><span class="badge badge-pending">Soft Food</span></td>
+                        <td>Green Kitchen Catering</td>
+                        <td><span class="badge badge-success">Delivered at 7:45 PM</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <script src="../../js/guardian.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

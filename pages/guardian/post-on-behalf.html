@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Post on Behalf of Relative</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="link-seeker.html">Link Care Seeker</a></li>
+            <li><a href="monitoring.html">Remote Monitoring</a></li>
+            <li><a href="post-on-behalf.html" class="active">Post on Behalf</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Post Help Request on Behalf of Relative</h1>
+        <p class="text-muted">If your elderly relative has difficulty using a smartphone or computer, you can create and manage requests for them directly.</p>
+
+        <div id="behalf-alert" class="alert hidden"></div>
+
+        <div class="row">
+            <div class="col card">
+                <h2>Create Request on Behalf</h2>
+                <form id="behalf-request-form" method="post" onsubmit="return submitBehalfRequest()">
+                    <div class="form-group">
+                        <label for="relative_select">Select Linked Relative</label>
+                        <select id="relative_select" name="relative_select" required>
+                            <option value="Abdul Rahman (Father)">Abdul Rahman (Father - Dhanmondi, Dhaka)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Assistance Category</label>
+                        <select id="category" name="category" required>
+                            <option value="groceries">Grocery Shopping &amp; Essentials</option>
+                            <option value="medicine">Prescription Medicine Collection</option>
+                            <option value="repair">Minor Home Repair &amp; Maintenance</option>
+                            <option value="companionship">Companionship &amp; Conversation Visit</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Short Request Title</label>
+                        <input type="text" id="title" name="title" placeholder="e.g. Need weekly vegetables and fruit delivery" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Specific Instructions for Neighborhood Volunteer</label>
+                        <textarea id="details" name="details" placeholder="Describe instructions, pharmacy name, or items needed..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency">
+                            <option value="normal">Normal (Within 24 Hours)</option>
+                            <option value="urgent">Urgent (Within 2-3 Hours)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Post Request for Relative</button>
+                </form>
+            </div>
+
+            <div class="col card">
+                <h2>Set Dietary &amp; Health Preferences</h2>
+                <p>Configure dietary guidelines for your relative's meal provider account to ensure suitable nutrition:</p>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input type="checkbox" id="pref_diabetic" checked>
+                        <label for="pref_diabetic">Diabetic-Friendly (Low sugar, balanced carbohydrates)</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="pref_lowsalt" checked>
+                        <label for="pref_lowsalt">Low-Salt / Low-Sodium (For blood pressure)</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="pref_soft">
+                        <label for="pref_soft">Soft Food (Easy to chew and swallow)</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="pref_spicy" checked>
+                        <label for="pref_spicy">Mild Spices Only (No spicy chilli)</label>
+                    </div>
+                </div>
+
+                <div class="notice-box">
+                    <h3>Guardian Safety Guarantee</h3>
+                    <p>All help requests posted on behalf are broadcast to verified local volunteers with identity checks performed by the platform administrator.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <script src="../../js/guardian.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

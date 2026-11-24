@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Link Care Seeker Account</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="link-seeker.html" class="active">Link Care Seeker</a></li>
+            <li><a href="monitoring.html">Remote Monitoring</a></li>
+            <li><a href="post-on-behalf.html">Post on Behalf</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Link Care Seeker Account</h1>
+        <p class="text-muted">Connect with your elderly parent or relative using their unique CareConnect approval code to start remote safety monitoring.</p>
+
+        <div id="link-alert" class="alert hidden"></div>
+
+        <div class="row">
+         
+            <div class="col card">
+                <h2>Link New Relative</h2>
+                <form id="link-seeker-form" method="post" onsubmit="return linkCareSeeker()">
+                    <div class="form-group">
+                        <label for="seeker_name">Relative's Full Name</label>
+                        <input type="text" id="seeker_name" name="seeker_name" placeholder="e.g. Abdul Rahman" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seeker_code">Care Seeker Approval Code</label>
+                        <input type="text" id="seeker_code" name="seeker_code" placeholder="e.g. CS-8842" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relation">Relationship</label>
+                        <select id="relation" name="relation" required>
+                            <option value="Father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Sibling">Sibling / Relative</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Verify &amp; Link Account</button>
+                </form>
+            </div>
+
+            <div class="col card">
+                <h2>How Guardian Linking Works</h2>
+                <ul class="guidelines-list">
+                    <li>The Care Seeker can view their approval code in their dashboard header (e.g. <strong>CS-8842</strong>).</li>
+                    <li>Once linked, you will receive real-time notifications for daily medicine adherence, task progress, and SOS alerts.</li>
+                    <li>You can link multiple relatives (e.g. both father and mother) to a single guardian account.</li>
+                    <li>You may disconnect or unlink anytime if care responsibilities change.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Currently Linked Care Seekers</h2>
+            <table class="table" id="linked-seekers-table">
+                <thead>
+                    <tr>
+                        <th>Care Seeker Name</th>
+                        <th>Approval Code</th>
+                        <th>Relationship</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Abdul Rahman</strong></td>
+                        <td>CS-8842</td>
+                        <td>Father</td>
+                        <td><span class="badge badge-success">Linked &amp; Active</span></td>
+                        <td><button type="button" class="btn btn-danger btn-sm btn-unlink" onclick="unlinkCareSeeker(this)">Unlink</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <script src="../../js/guardian.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
